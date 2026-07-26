@@ -4,7 +4,7 @@ const { URLSearchParams } = require('url');
 
 const server = http.createServer((req, res) => {
   console.log(req.url,req.method);
-  //process.exit();//stops event loop
+  //process.exit();//stops event loop, an alternative to be used if needed for lower LOC
 
   if(req.url === '/'){
     res.setHeader('Content-Type', 'Text/HTML');
