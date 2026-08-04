@@ -15,7 +15,7 @@ app.use("/submit-details",(req, res, next)=>{
 });
 
 
-const PORT=4000;
+const PORT=3000;//any available port
 
 app.listen(PORT, ()=>{
   console.log(`SERVER RUNNING ON ADDRESS http://localhost:${PORT}`);
