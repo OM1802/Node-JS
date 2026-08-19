@@ -1,0 +1,75 @@
+<%- include('partials/head') %>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900">
+
+    <%- include('partials/nav') %>
+
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+
+      <!-- Page Heading -->
+      <div class="mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Available homes
+        </h2>
+
+        <p class="text-gray-500 mt-2">
+          Find the perfect place for your next stay.
+        </p>
+      </div>
+
+
+      <!-- Homes Grid -->
+      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        <% regHomes.forEach(home => { %>
+
+          <li
+            class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg border border-gray-100 transition duration-300 hover:-translate-y-1"
+          >
+
+            <!-- Placeholder Image -->
+            <div class="h-52 bg-gray-200 flex items-center justify-center">
+              <span class="text-gray-400 text-sm">
+                Home Image
+              </span>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-5">
+
+              <div class="flex items-start justify-between gap-3">
+
+                <h3 class="text-lg font-semibold text-gray-900">
+                  <%= home.houseName %>
+                </h3>
+
+                <span class="text-yellow-500 text-sm">
+                  ★ 4.8
+                </span>
+
+              </div>
+
+              <p class="text-gray-500 text-sm mt-2">
+                Beautiful place to stay
+              </p>
+
+              <p class="mt-4 text-gray-900">
+                <span class="font-semibold">₹2,500</span>
+                <span class="text-gray-500 text-sm"> night</span>
+              </p>
+
+            </div>
+
+          </li>
+
+        <% }) %>
+
+      </ul>
+
+    </main>
+
+  </body>
+</html>
